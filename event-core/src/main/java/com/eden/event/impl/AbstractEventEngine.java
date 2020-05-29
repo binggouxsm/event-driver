@@ -3,7 +3,6 @@ package com.eden.event.impl;
 import com.eden.event.Event;
 import com.eden.event.EventEngine;
 import com.eden.event.EventHandler;
-import com.eden.event.EventType;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -35,7 +34,7 @@ public abstract class AbstractEventEngine implements EventEngine {
         if(handlers != null)
             handlers.stream().forEach(handler-> handler.handle(event));
 
-        handlers = handlerMapper.get(EventType.ALL.toString());
+        handlers = handlerMapper.get("ALL");
         if(handlers != null)
             handlers.stream().forEach(handler-> handler.handle(event));
     }
