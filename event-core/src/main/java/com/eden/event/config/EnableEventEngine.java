@@ -1,4 +1,4 @@
-package com.eden.config;
+package com.eden.event.config;
 
 import org.springframework.context.annotation.Import;
 
@@ -10,5 +10,9 @@ import java.lang.annotation.*;
 @Import(EventEngineImportSelector.class)
 public @interface EnableEventEngine {
 
-    String value() default "redis";
+    /**
+     * 根据value属性去决定Config类
+     * @return
+     */
+    String value() default "com.eden.event.config.RedisConfig";
 }

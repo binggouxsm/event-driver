@@ -1,4 +1,4 @@
-package com.eden.config;
+package com.eden.event.config;
 
 import com.eden.event.EventEngine;
 import com.eden.event.impl.MemoryEventEngine;
